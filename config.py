@@ -22,11 +22,12 @@ ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "30"))
 
 # ============================================
-# OPENAI CONFIGURATION
+# GEMINI CONFIGURATION
 # ============================================
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-if not OPENAI_API_KEY:
-    raise ValueError("OPENAI_API_KEY not set in .env file!")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if not GEMINI_API_KEY:
+    raise ValueError("GEMINI_API_KEY not set in .env file!")
+
 
 # ============================================
 # AWS CONFIGURATION
@@ -42,3 +43,4 @@ AWS_REGION = os.getenv("AWS_REGION", "us-east-1")
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 print("✓ Configuration loaded successfully!")
+
